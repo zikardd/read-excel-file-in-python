@@ -1,0 +1,16 @@
+''' Read excel file Python Program '''
+''' From local device to google colab '''
+
+#import the excel file from your local device
+from google.colab import files
+uploaded = files.upload()
+
+#import the library
+import io
+import pandas as pd
+
+#initialize the variable
+df = pd.read_excel(io.BytesIO(uploaded['tesaja.xlsx']))
+
+#show the output
+df
