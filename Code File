@@ -2,18 +2,17 @@
 ''' From local device to google colab '''
 
 # In this case, i use 'tesaja.xlsx' file
-# You can find it in my 'file-data-excel' repository
 
-#import the excel file from your local device
+# import the excel file from your local device
 from google.colab import files
 uploaded = files.upload()
 
-#import the library
+# import the require library
 import io
 import pandas as pd
 
-#initialize the variable
+# initialize the variable
 df = pd.read_excel(io.BytesIO(uploaded['tesaja.xlsx']))
 
-#show the output
+# show the output
 df
